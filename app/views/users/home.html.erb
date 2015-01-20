@@ -1,9 +1,14 @@
-<%= link_to 'Sign up', new_user_registration_path %>
-<%= link_to 'Sign In', new_user_session_path %>
 
 
-<%= link_to 'New Tweet', new_tweet_path %>
+<p><%= link_to 'Sign up', new_user_registration_path %></p>
+<p><%= link_to 'Sign In', new_user_session_path %></p>
+<p><%= link_to 'New Tweet', new_tweet_path %></p>
+<p><%= link_to 'Signin with twitter', user_omniauth_authorize_path(:twitter) %></p>
+
+
+
 
 <% @tweets.each do |tweet| %>
 	<p><%= tweet.body %></p>
 <% end %>
+
